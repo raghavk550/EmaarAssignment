@@ -16,6 +16,16 @@
 @end
 
 @implementation ViewController
+@synthesize usersDb;
+
+- (NSManagedObjectContext *) managedObjectContext {
+    NSManagedObjectContext *context = nil;
+    _delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    if ([_delegate respondsToSelector:@selector(persistentContainer)]) {
+        context = _delegate.persistentContainer.viewContext;
+    }
+    return context;
+}
 
 #pragma mark - Variables
 
@@ -30,13 +40,21 @@ NSMutableArray *usersArray;
     // Set title
     self.title = @"Users List";
     
-    // Call Api
-    [self callUserListApi];
+//    // Call Api
+//    [self callUserListApi];
+    
+//    // Fetch Data from Core data
+//    [self fetchUsersData];
+    
+    // Delete all data from Core Data
+    [self deleteUserData];
 }
 
 #pragma mark - API Call
 
 - (void)callUserListApi {
+    NSManagedObjectContext *context = [self managedObjectContext];
+    
     NSString *userData = [NSString stringWithFormat:@"https://randomuser.me/api?results=%d", 100];
     
     NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString: userData]];
@@ -85,7 +103,7 @@ NSMutableArray *usersArray;
                 [dateFormatter setDateFormat:@"dd MMM yyyy"];
                 user.dobDate = [dateFormatter stringFromDate:dateFromDobString];
                 
-                user.dobAge = userData[@"dob"][@"age"];
+                user.dobAge = [userData[@"dob"][@"age"] stringValue];
                 
                 NSString *registeredDate = userData[@"registered"][@"date"];
                 [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSZ"];
@@ -117,9 +135,41 @@ NSMutableArray *usersArray;
                 user.pictureMedium = userData[@"picture"][@"medium"];
                 
                 [usersArray addObject:user];
+                
+                NSManagedObject *newUser = [NSEntityDescription insertNewObjectForEntityForName:@"Users" inManagedObjectContext:context];
+                
+                [newUser setValue:fullName forKey:@"fullName"];
+                [newUser setValue:user.city forKey:@"city"];
+                [newUser setValue:user.state forKey:@"state"];
+                [newUser setValue:user.email forKey:@"email"];
+                [newUser setValue:user.gender forKey:@"gender"];
+                [newUser setValue:user.country forKey:@"country"];
+                [newUser setValue:user.postCode forKey:@"postCode"];
+                [newUser setValue:user.dobAge forKey:@"dobAge"];
+                [newUser setValue:user.dobDate forKey:@"dobDate"];
+                [newUser setValue:user.registeredDate forKey:@"registeredDate"];
+                [newUser setValue:user.pictureLarge forKey:@"pictureLarge"];
+                [newUser setValue:user.pictureMedium forKey:@"pictureMedium"];
+                
+//                NSError *error = nil;
+//                if (![context save:&error]) {
+//                    NSLog(@"%@ %@", error, [error localizedDescription]);
+//                }
+//                else {
+//                    NSLog(@"Data Saved");
+//                }
             }
             dispatch_async(dispatch_get_main_queue(), ^{
-                [self->_tableView reloadData];
+                NSError *error = nil;
+                if (![context save:&error]) {
+                    NSLog(@"%@ %@", error, [error localizedDescription]);
+                }
+                else {
+                    NSLog(@"Data Saved");
+                    
+                    // Fetch Data from Core data
+                    [self fetchUsersData];
+                }
             });
         }
         else
@@ -128,6 +178,48 @@ NSMutableArray *usersArray;
         }
     }];
     [dataTask resume];
+}
+
+#pragma mark - Fetch Users data
+
+- (void)fetchUsersData {
+    NSManagedObjectContext *context = [self managedObjectContext];
+    
+    usersArray = [[NSMutableArray alloc] init];
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Users"];
+    usersArray = [[context executeFetchRequest:request error:nil] mutableCopy];
+    
+    [_tableView reloadData];
+}
+
+#pragma mark - Delete All data
+
+- (void)deleteUserData {
+    NSManagedObjectContext *context = [self managedObjectContext];
+
+    // Fetch all objects of the entity
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Users"];
+    NSError *fetchError = nil;
+    NSArray *users = [context executeFetchRequest:fetchRequest error:&fetchError];
+
+    if (fetchError) {
+        NSLog(@"Error fetching objects: %@", fetchError);
+    } else {
+        // Delete each fetched object
+        for (NSManagedObject *user in users) {
+            [context deleteObject:user];
+        }
+
+        // Save the context to commit the changes
+        NSError *saveError = nil;
+        if (![context save:&saveError]) {
+            NSLog(@"Error saving context: %@", saveError);
+        }
+        else {
+            [self callUserListApi];
+        }
+    }
 }
 
 #pragma mark - Table view Datasource

@@ -45,7 +45,7 @@ extension UserDetailViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "UserImageDetailTableViewCell", for: indexPath) as! UserImageDetailTableViewCell
             cell.userImageView.sd_setImage(with: URL(string: self.usersInfo.pictureLarge), placeholderImage: UIImage(systemName: "person"))
             cell.ageView.addDiamondMask()
-            cell.ageLabel.text = self.usersInfo.dobAge.stringValue
+            cell.ageLabel.text = self.usersInfo.dobAge
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "UserBasicDetailTableViewCell", for: indexPath) as! UserBasicDetailTableViewCell

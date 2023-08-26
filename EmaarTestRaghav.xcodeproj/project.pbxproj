@@ -23,6 +23,7 @@
 		18E92CD62A9A1EC100E84549 /* UserBasicDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E92CD52A9A1EC100E84549 /* UserBasicDetailTableViewCell.swift */; };
 		18E92CD82A9A1ED100E84549 /* UserLocationDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E92CD72A9A1ED100E84549 /* UserLocationDetailTableViewCell.swift */; };
 		18E92CDA2A9A42ED00E84549 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E92CD92A9A42ED00E84549 /* UIViewControllerExtension.swift */; };
+		18E92CDC2A9A671800E84549 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E92CDB2A9A671700E84549 /* CoreData.framework */; };
 		E9EC749B856D8151D441A0A6 /* Pods_EmaarTestRaghav.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F069D4EE134CF23A79D5D56 /* Pods_EmaarTestRaghav.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		18E92CD52A9A1EC100E84549 /* UserBasicDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBasicDetailTableViewCell.swift; sourceTree = "<group>"; };
 		18E92CD72A9A1ED100E84549 /* UserLocationDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationDetailTableViewCell.swift; sourceTree = "<group>"; };
 		18E92CD92A9A42ED00E84549 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		18E92CDB2A9A671700E84549 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		84ECA22572FC2E014658D93E /* Pods-EmaarTestRaghav.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmaarTestRaghav.release.xcconfig"; path = "Target Support Files/Pods-EmaarTestRaghav/Pods-EmaarTestRaghav.release.xcconfig"; sourceTree = "<group>"; };
 		9F069D4EE134CF23A79D5D56 /* Pods_EmaarTestRaghav.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmaarTestRaghav.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD6E97A883A4A2AF2176631C /* Pods-EmaarTestRaghav.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmaarTestRaghav.debug.xcconfig"; path = "Target Support Files/Pods-EmaarTestRaghav/Pods-EmaarTestRaghav.debug.xcconfig"; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9EC749B856D8151D441A0A6 /* Pods_EmaarTestRaghav.framework in Frameworks */,
+				18E92CDC2A9A671800E84549 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +202,7 @@
 		6BF188C25A9002000E087F8C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18E92CDB2A9A671700E84549 /* CoreData.framework */,
 				9F069D4EE134CF23A79D5D56 /* Pods_EmaarTestRaghav.framework */,
 			);
 			name = Frameworks;
