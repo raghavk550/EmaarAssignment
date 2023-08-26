@@ -15,6 +15,14 @@
 		18E92CAD2A99E30400E84549 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E92CAC2A99E30400E84549 /* Assets.xcassets */; };
 		18E92CB02A99E30400E84549 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E92CAE2A99E30400E84549 /* LaunchScreen.storyboard */; };
 		18E92CB32A99E30400E84549 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E92CB22A99E30400E84549 /* main.m */; };
+		18E92CBF2A99E82C00E84549 /* UsersInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E92CBE2A99E82C00E84549 /* UsersInformation.m */; };
+		18E92CC62A9A040300E84549 /* UsersListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E92CC52A9A040300E84549 /* UsersListTableViewCell.m */; };
+		18E92CC92A9A0CC400E84549 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E92CC82A9A0CC400E84549 /* UserDetailViewController.swift */; };
+		18E92CCE2A9A1D5B00E84549 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E92CCD2A9A1D5B00E84549 /* UIViewExtension.swift */; };
+		18E92CD42A9A1E9E00E84549 /* UserImageDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E92CD32A9A1E9E00E84549 /* UserImageDetailTableViewCell.swift */; };
+		18E92CD62A9A1EC100E84549 /* UserBasicDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E92CD52A9A1EC100E84549 /* UserBasicDetailTableViewCell.swift */; };
+		18E92CD82A9A1ED100E84549 /* UserLocationDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E92CD72A9A1ED100E84549 /* UserLocationDetailTableViewCell.swift */; };
+		E9EC749B856D8151D441A0A6 /* Pods_EmaarTestRaghav.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F069D4EE134CF23A79D5D56 /* Pods_EmaarTestRaghav.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +39,19 @@
 		18E92CAF2A99E30400E84549 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18E92CB12A99E30400E84549 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18E92CB22A99E30400E84549 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		18E92CBD2A99E82C00E84549 /* UsersInformation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UsersInformation.h; sourceTree = "<group>"; };
+		18E92CBE2A99E82C00E84549 /* UsersInformation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UsersInformation.m; sourceTree = "<group>"; };
+		18E92CC42A9A040300E84549 /* UsersListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UsersListTableViewCell.h; sourceTree = "<group>"; };
+		18E92CC52A9A040300E84549 /* UsersListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UsersListTableViewCell.m; sourceTree = "<group>"; };
+		18E92CC72A9A0CC300E84549 /* EmaarTestRaghav-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EmaarTestRaghav-Bridging-Header.h"; sourceTree = "<group>"; };
+		18E92CC82A9A0CC400E84549 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		18E92CCD2A9A1D5B00E84549 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		18E92CD32A9A1E9E00E84549 /* UserImageDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImageDetailTableViewCell.swift; sourceTree = "<group>"; };
+		18E92CD52A9A1EC100E84549 /* UserBasicDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBasicDetailTableViewCell.swift; sourceTree = "<group>"; };
+		18E92CD72A9A1ED100E84549 /* UserLocationDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationDetailTableViewCell.swift; sourceTree = "<group>"; };
+		84ECA22572FC2E014658D93E /* Pods-EmaarTestRaghav.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmaarTestRaghav.release.xcconfig"; path = "Target Support Files/Pods-EmaarTestRaghav/Pods-EmaarTestRaghav.release.xcconfig"; sourceTree = "<group>"; };
+		9F069D4EE134CF23A79D5D56 /* Pods_EmaarTestRaghav.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmaarTestRaghav.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD6E97A883A4A2AF2176631C /* Pods-EmaarTestRaghav.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmaarTestRaghav.debug.xcconfig"; path = "Target Support Files/Pods-EmaarTestRaghav/Pods-EmaarTestRaghav.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9EC749B856D8151D441A0A6 /* Pods_EmaarTestRaghav.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,6 +71,8 @@
 			children = (
 				18E92C9C2A99E30300E84549 /* EmaarTestRaghav */,
 				18E92C9B2A99E30300E84549 /* Products */,
+				F60E817BF717BBDE4628FB60 /* Pods */,
+				6BF188C25A9002000E087F8C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,20 +87,127 @@
 		18E92C9C2A99E30300E84549 /* EmaarTestRaghav */ = {
 			isa = PBXGroup;
 			children = (
-				18E92C9D2A99E30300E84549 /* AppDelegate.h */,
-				18E92C9E2A99E30300E84549 /* AppDelegate.m */,
-				18E92CA02A99E30300E84549 /* SceneDelegate.h */,
-				18E92CA12A99E30300E84549 /* SceneDelegate.m */,
-				18E92CA32A99E30300E84549 /* ViewController.h */,
-				18E92CA42A99E30300E84549 /* ViewController.m */,
-				18E92CA62A99E30300E84549 /* Main.storyboard */,
+				18E92CCC2A9A1D3100E84549 /* Extensions */,
+				18E92CBC2A99E81A00E84549 /* Models */,
+				18E92CB92A99E32B00E84549 /* Initialisation */,
+				18E92CBA2A99E34700E84549 /* Controllers */,
+				18E92CC32A9A03D600E84549 /* TableViewCells */,
+				18E92CBB2A99E35D00E84549 /* Storyboards */,
 				18E92CAC2A99E30400E84549 /* Assets.xcassets */,
-				18E92CAE2A99E30400E84549 /* LaunchScreen.storyboard */,
 				18E92CB12A99E30400E84549 /* Info.plist */,
 				18E92CB22A99E30400E84549 /* main.m */,
 				18E92CA92A99E30300E84549 /* EmaarTestRaghav.xcdatamodeld */,
 			);
 			path = EmaarTestRaghav;
+			sourceTree = "<group>";
+		};
+		18E92CB92A99E32B00E84549 /* Initialisation */ = {
+			isa = PBXGroup;
+			children = (
+				18E92C9D2A99E30300E84549 /* AppDelegate.h */,
+				18E92C9E2A99E30300E84549 /* AppDelegate.m */,
+				18E92CA02A99E30300E84549 /* SceneDelegate.h */,
+				18E92CA12A99E30300E84549 /* SceneDelegate.m */,
+			);
+			path = Initialisation;
+			sourceTree = "<group>";
+		};
+		18E92CBA2A99E34700E84549 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				18E92CCA2A9A103B00E84549 /* Users List */,
+				18E92CCB2A9A104A00E84549 /* User Details */,
+				18E92CC72A9A0CC300E84549 /* EmaarTestRaghav-Bridging-Header.h */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		18E92CBB2A99E35D00E84549 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				18E92CA62A99E30300E84549 /* Main.storyboard */,
+				18E92CAE2A99E30400E84549 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		18E92CBC2A99E81A00E84549 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				18E92CBD2A99E82C00E84549 /* UsersInformation.h */,
+				18E92CBE2A99E82C00E84549 /* UsersInformation.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		18E92CC32A9A03D600E84549 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				18E92CCF2A9A1E2700E84549 /* Users List */,
+				18E92CD02A9A1E3E00E84549 /* User Details */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		18E92CCA2A9A103B00E84549 /* Users List */ = {
+			isa = PBXGroup;
+			children = (
+				18E92CA32A99E30300E84549 /* ViewController.h */,
+				18E92CA42A99E30300E84549 /* ViewController.m */,
+			);
+			path = "Users List";
+			sourceTree = "<group>";
+		};
+		18E92CCB2A9A104A00E84549 /* User Details */ = {
+			isa = PBXGroup;
+			children = (
+				18E92CC82A9A0CC400E84549 /* UserDetailViewController.swift */,
+			);
+			path = "User Details";
+			sourceTree = "<group>";
+		};
+		18E92CCC2A9A1D3100E84549 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				18E92CCD2A9A1D5B00E84549 /* UIViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		18E92CCF2A9A1E2700E84549 /* Users List */ = {
+			isa = PBXGroup;
+			children = (
+				18E92CC42A9A040300E84549 /* UsersListTableViewCell.h */,
+				18E92CC52A9A040300E84549 /* UsersListTableViewCell.m */,
+			);
+			path = "Users List";
+			sourceTree = "<group>";
+		};
+		18E92CD02A9A1E3E00E84549 /* User Details */ = {
+			isa = PBXGroup;
+			children = (
+				18E92CD32A9A1E9E00E84549 /* UserImageDetailTableViewCell.swift */,
+				18E92CD52A9A1EC100E84549 /* UserBasicDetailTableViewCell.swift */,
+				18E92CD72A9A1ED100E84549 /* UserLocationDetailTableViewCell.swift */,
+			);
+			path = "User Details";
+			sourceTree = "<group>";
+		};
+		6BF188C25A9002000E087F8C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F069D4EE134CF23A79D5D56 /* Pods_EmaarTestRaghav.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F60E817BF717BBDE4628FB60 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AD6E97A883A4A2AF2176631C /* Pods-EmaarTestRaghav.debug.xcconfig */,
+				84ECA22572FC2E014658D93E /* Pods-EmaarTestRaghav.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,9 +217,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18E92CB62A99E30400E84549 /* Build configuration list for PBXNativeTarget "EmaarTestRaghav" */;
 			buildPhases = (
+				11F8C09A4C2C836FEA3ECEF6 /* [CP] Check Pods Manifest.lock */,
 				18E92C962A99E30300E84549 /* Sources */,
 				18E92C972A99E30300E84549 /* Frameworks */,
 				18E92C982A99E30300E84549 /* Resources */,
+				75B729D834C541ECE553ADAD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -110,6 +243,7 @@
 				TargetAttributes = {
 					18E92C992A99E30300E84549 = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -144,16 +278,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		11F8C09A4C2C836FEA3ECEF6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EmaarTestRaghav-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75B729D834C541ECE553ADAD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EmaarTestRaghav/Pods-EmaarTestRaghav-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EmaarTestRaghav/Pods-EmaarTestRaghav-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EmaarTestRaghav/Pods-EmaarTestRaghav-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		18E92C962A99E30300E84549 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				18E92CB32A99E30400E84549 /* main.m in Sources */,
+				18E92CC62A9A040300E84549 /* UsersListTableViewCell.m in Sources */,
+				18E92CC92A9A0CC400E84549 /* UserDetailViewController.swift in Sources */,
 				18E92CA52A99E30300E84549 /* ViewController.m in Sources */,
 				18E92C9F2A99E30300E84549 /* AppDelegate.m in Sources */,
 				18E92CA22A99E30300E84549 /* SceneDelegate.m in Sources */,
+				18E92CD82A9A1ED100E84549 /* UserLocationDetailTableViewCell.swift in Sources */,
+				18E92CD62A9A1EC100E84549 /* UserBasicDetailTableViewCell.swift in Sources */,
+				18E92CCE2A9A1D5B00E84549 /* UIViewExtension.swift in Sources */,
 				18E92CAB2A99E30300E84549 /* EmaarTestRaghav.xcdatamodeld in Sources */,
+				18E92CBF2A99E82C00E84549 /* UsersInformation.m in Sources */,
+				18E92CD42A9A1E9E00E84549 /* UserImageDetailTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,9 +474,11 @@
 		};
 		18E92CB72A99E30400E84549 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD6E97A883A4A2AF2176631C /* Pods-EmaarTestRaghav.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -311,15 +496,20 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.raghav.EmaarTestRaghav;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "EmaarTestRaghav/Controllers/EmaarTestRaghav-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		18E92CB82A99E30400E84549 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84ECA22572FC2E014658D93E /* Pods-EmaarTestRaghav.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -337,6 +527,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.raghav.EmaarTestRaghav;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "EmaarTestRaghav/Controllers/EmaarTestRaghav-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

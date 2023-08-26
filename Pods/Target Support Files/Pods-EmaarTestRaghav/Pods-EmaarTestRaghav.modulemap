@@ -1,0 +1,6 @@
+framework module Pods_EmaarTestRaghav {
+  umbrella header "Pods-EmaarTestRaghav-umbrella.h"
+
+  export *
+  module * { export * }
+}
