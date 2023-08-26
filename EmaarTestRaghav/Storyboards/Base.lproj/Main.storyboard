@@ -148,16 +148,16 @@
                                                     </constraints>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WBt-DN-i0w">
-                                                    <rect key="frame" x="256.66666666666669" y="190" width="50" height="50"/>
+                                                    <rect key="frame" x="246.66666666666663" y="180" width="60" height="60"/>
                                                     <color key="backgroundColor" red="1" green="0.84738773647627896" blue="0.61717127867996679" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" priority="999" constant="50" id="Apc-Ni-673"/>
-                                                        <constraint firstAttribute="width" priority="999" constant="50" id="a4r-5X-EaO"/>
+                                                        <constraint firstAttribute="height" priority="999" constant="60" id="Apc-Ni-673"/>
+                                                        <constraint firstAttribute="width" priority="999" constant="60" id="a4r-5X-EaO"/>
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOx-qW-m4j">
-                                                    <rect key="frame" x="271.33333333333331" y="204.66666666666666" width="20.333333333333314" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="266.33333333333331" y="200.33333333333334" width="20.333333333333314" height="19.333333333333343"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>

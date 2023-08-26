@@ -25,5 +25,14 @@ extension UIView {
         shapeLayer.lineCap = CAShapeLayerLineCap.round
 
         layer.mask = shapeLayer
+        
+        //setup Border for Mask
+        let borderLayer = CAShapeLayer()
+        borderLayer.path = path.cgPath
+        borderLayer.lineWidth = 5
+        borderLayer.strokeColor = UIColor.yellow.cgColor
+        borderLayer.fillColor = UIColor.clear.cgColor
+        borderLayer.frame = self.bounds
+        self.layer.addSublayer(borderLayer)
     }
 }

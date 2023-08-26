@@ -22,6 +22,7 @@
 		18E92CD42A9A1E9E00E84549 /* UserImageDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E92CD32A9A1E9E00E84549 /* UserImageDetailTableViewCell.swift */; };
 		18E92CD62A9A1EC100E84549 /* UserBasicDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E92CD52A9A1EC100E84549 /* UserBasicDetailTableViewCell.swift */; };
 		18E92CD82A9A1ED100E84549 /* UserLocationDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E92CD72A9A1ED100E84549 /* UserLocationDetailTableViewCell.swift */; };
+		18E92CDA2A9A42ED00E84549 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E92CD92A9A42ED00E84549 /* UIViewControllerExtension.swift */; };
 		E9EC749B856D8151D441A0A6 /* Pods_EmaarTestRaghav.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F069D4EE134CF23A79D5D56 /* Pods_EmaarTestRaghav.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		18E92CD32A9A1E9E00E84549 /* UserImageDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImageDetailTableViewCell.swift; sourceTree = "<group>"; };
 		18E92CD52A9A1EC100E84549 /* UserBasicDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBasicDetailTableViewCell.swift; sourceTree = "<group>"; };
 		18E92CD72A9A1ED100E84549 /* UserLocationDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationDetailTableViewCell.swift; sourceTree = "<group>"; };
+		18E92CD92A9A42ED00E84549 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		84ECA22572FC2E014658D93E /* Pods-EmaarTestRaghav.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmaarTestRaghav.release.xcconfig"; path = "Target Support Files/Pods-EmaarTestRaghav/Pods-EmaarTestRaghav.release.xcconfig"; sourceTree = "<group>"; };
 		9F069D4EE134CF23A79D5D56 /* Pods_EmaarTestRaghav.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmaarTestRaghav.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD6E97A883A4A2AF2176631C /* Pods-EmaarTestRaghav.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmaarTestRaghav.debug.xcconfig"; path = "Target Support Files/Pods-EmaarTestRaghav/Pods-EmaarTestRaghav.debug.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				18E92CCD2A9A1D5B00E84549 /* UIViewExtension.swift */,
+				18E92CD92A9A42ED00E84549 /* UIViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				18E92CD82A9A1ED100E84549 /* UserLocationDetailTableViewCell.swift in Sources */,
 				18E92CD62A9A1EC100E84549 /* UserBasicDetailTableViewCell.swift in Sources */,
 				18E92CCE2A9A1D5B00E84549 /* UIViewExtension.swift in Sources */,
+				18E92CDA2A9A42ED00E84549 /* UIViewControllerExtension.swift in Sources */,
 				18E92CAB2A99E30300E84549 /* EmaarTestRaghav.xcdatamodeld in Sources */,
 				18E92CBF2A99E82C00E84549 /* UsersInformation.m in Sources */,
 				18E92CD42A9A1E9E00E84549 /* UserImageDetailTableViewCell.swift in Sources */,
