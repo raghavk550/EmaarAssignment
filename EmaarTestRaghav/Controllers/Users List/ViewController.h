@@ -6,21 +6,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreData/CoreData.h>
-#import "AppDelegate.h"
-#import <SystemConfiguration/SystemConfiguration.h>
-#import "Reachability.h"
+#import "ViewModel.h"
+
+@class ViewModel;
 
 @interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 
-@property (strong, nonatomic) AppDelegate *delegate;
-@property (strong) NSManagedObject *usersDb;
-
-- (void)callUserListApi: (int) count;
-
-- (BOOL)connected;
+@property (nonatomic, strong) ViewModel *viewModel;
 
 @end
 

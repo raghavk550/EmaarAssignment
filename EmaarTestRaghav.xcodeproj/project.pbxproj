@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		187F97722A9B1E5C00918079 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187F97712A9B1E5C00918079 /* SystemConfiguration.framework */; };
 		187F97762A9B1FA900918079 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 187F97752A9B1FA900918079 /* Reachability.m */; };
+		187F977C2A9B451700918079 /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 187F977B2A9B451700918079 /* ViewModel.m */; };
 		18E92C9F2A99E30300E84549 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E92C9E2A99E30300E84549 /* AppDelegate.m */; };
 		18E92CA22A99E30300E84549 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E92CA12A99E30300E84549 /* SceneDelegate.m */; };
 		18E92CA52A99E30300E84549 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E92CA42A99E30300E84549 /* ViewController.m */; };
@@ -33,6 +34,8 @@
 		187F97712A9B1E5C00918079 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		187F97742A9B1FA900918079 /* Reachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		187F97752A9B1FA900918079 /* Reachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		187F977A2A9B451700918079 /* ViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewModel.h; sourceTree = "<group>"; };
+		187F977B2A9B451700918079 /* ViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewModel.m; sourceTree = "<group>"; };
 		18E92C9A2A99E30300E84549 /* EmaarTestRaghav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmaarTestRaghav.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E92C9D2A99E30300E84549 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18E92C9E2A99E30300E84549 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -173,6 +176,8 @@
 		18E92CCA2A9A103B00E84549 /* Users List */ = {
 			isa = PBXGroup;
 			children = (
+				187F977A2A9B451700918079 /* ViewModel.h */,
+				187F977B2A9B451700918079 /* ViewModel.m */,
 				18E92CA32A99E30300E84549 /* ViewController.h */,
 				18E92CA42A99E30300E84549 /* ViewController.m */,
 			);
@@ -361,6 +366,7 @@
 				18E92CDA2A9A42ED00E84549 /* UIViewControllerExtension.swift in Sources */,
 				187F97762A9B1FA900918079 /* Reachability.m in Sources */,
 				18E92CAB2A99E30300E84549 /* EmaarTestRaghav.xcdatamodeld in Sources */,
+				187F977C2A9B451700918079 /* ViewModel.m in Sources */,
 				18E92CBF2A99E82C00E84549 /* UsersInformation.m in Sources */,
 				18E92CD42A9A1E9E00E84549 /* UserImageDetailTableViewCell.swift in Sources */,
 			);
