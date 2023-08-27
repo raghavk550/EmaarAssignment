@@ -8,6 +8,8 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 #import "AppDelegate.h"
+#import <SystemConfiguration/SystemConfiguration.h>
+#import "Reachability.h"
 
 @interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
@@ -16,7 +18,9 @@
 @property (strong, nonatomic) AppDelegate *delegate;
 @property (strong) NSManagedObject *usersDb;
 
-- (void)callUserListApi;
+- (void)callUserListApi: (int) count;
+
+- (BOOL)connected;
 
 @end
 

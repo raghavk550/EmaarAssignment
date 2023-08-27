@@ -40,21 +40,28 @@ NSMutableArray *usersArray;
     // Set title
     self.title = @"Users List";
     
-//    // Call Api
-//    [self callUserListApi];
+    // Fetch Data from Core data
+    [self fetchUsersData];
     
-//    // Fetch Data from Core data
-//    [self fetchUsersData];
-    
-    // Delete all data from Core Data
-    [self deleteUserData];
+    if ([self connected]) {
+        // Call Api
+        [self callUserListApi:100];
+    }
+}
+
+#pragma mark - Check Internet Connectivity
+
+- (BOOL)connected
+{
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+//    Reachability* reachability = [Reachability reachabilityWithHostName:@"www.google.com"];
+    NetworkStatus networkStatus = [reachability currentReachabilityStatus];
+    return networkStatus != NotReachable;
 }
 
 #pragma mark - API Call
 
-- (void)callUserListApi {
-    NSManagedObjectContext *context = [self managedObjectContext];
-    
+- (void)callUserListApi: (int) count {
     NSString *userData = [NSString stringWithFormat:@"https://randomuser.me/api?results=%d", 100];
     
     NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString: userData]];
@@ -70,7 +77,57 @@ NSMutableArray *usersArray;
             NSError *parseError = nil;
             NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
             
-            NSArray *userResultArray = responseDictionary[@"results"];
+            NSArray *userResultsArray = responseDictionary[@"results"];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self deleteUserData:userResultsArray];
+            });
+        }
+        else
+        {
+            NSLog(@"Error");
+        }
+    }];
+    [dataTask resume];
+}
+
+#pragma mark - Fetch Users data
+
+- (void)fetchUsersData {
+    NSManagedObjectContext *context = [self managedObjectContext];
+    
+    usersArray = [[NSMutableArray alloc] init];
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Users"];
+    usersArray = [[context executeFetchRequest:request error:nil] mutableCopy];
+    
+    [_tableView reloadData];
+}
+
+#pragma mark - Delete All data
+
+- (void)deleteUserData: (NSArray *) userResultArray {
+    NSManagedObjectContext *context = [self managedObjectContext];
+
+    // Fetch all objects of the entity
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Users"];
+    NSError *fetchError = nil;
+    NSArray *users = [context executeFetchRequest:fetchRequest error:&fetchError];
+
+    if (fetchError) {
+        NSLog(@"Error fetching objects: %@", fetchError);
+    } else {
+        // Delete each fetched object
+        for (NSManagedObject *user in users) {
+            [context deleteObject:user];
+        }
+
+        // Save the context to commit the changes
+        NSError *saveError = nil;
+        if (![context save:&saveError]) {
+            NSLog(@"Error saving context: %@", saveError);
+        }
+        else {
+            // Save new data to Core Data
             usersArray = [[NSMutableArray alloc] init];
             NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
             NSDate *nowDate = [[NSDate alloc] init];
@@ -150,14 +207,6 @@ NSMutableArray *usersArray;
                 [newUser setValue:user.registeredDate forKey:@"registeredDate"];
                 [newUser setValue:user.pictureLarge forKey:@"pictureLarge"];
                 [newUser setValue:user.pictureMedium forKey:@"pictureMedium"];
-                
-//                NSError *error = nil;
-//                if (![context save:&error]) {
-//                    NSLog(@"%@ %@", error, [error localizedDescription]);
-//                }
-//                else {
-//                    NSLog(@"Data Saved");
-//                }
             }
             dispatch_async(dispatch_get_main_queue(), ^{
                 NSError *error = nil;
@@ -172,57 +221,14 @@ NSMutableArray *usersArray;
                 }
             });
         }
-        else
-        {
-            NSLog(@"Error");
-        }
-    }];
-    [dataTask resume];
-}
-
-#pragma mark - Fetch Users data
-
-- (void)fetchUsersData {
-    NSManagedObjectContext *context = [self managedObjectContext];
-    
-    usersArray = [[NSMutableArray alloc] init];
-    
-    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Users"];
-    usersArray = [[context executeFetchRequest:request error:nil] mutableCopy];
-    
-    [_tableView reloadData];
-}
-
-#pragma mark - Delete All data
-
-- (void)deleteUserData {
-    NSManagedObjectContext *context = [self managedObjectContext];
-
-    // Fetch all objects of the entity
-    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Users"];
-    NSError *fetchError = nil;
-    NSArray *users = [context executeFetchRequest:fetchRequest error:&fetchError];
-
-    if (fetchError) {
-        NSLog(@"Error fetching objects: %@", fetchError);
-    } else {
-        // Delete each fetched object
-        for (NSManagedObject *user in users) {
-            [context deleteObject:user];
-        }
-
-        // Save the context to commit the changes
-        NSError *saveError = nil;
-        if (![context save:&saveError]) {
-            NSLog(@"Error saving context: %@", saveError);
-        }
-        else {
-            [self callUserListApi];
-        }
     }
 }
 
 #pragma mark - Table view Datasource
+
+- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return usersArray.count;
+}
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     static NSString *cellIdentifier = @"UsersListTableViewCell";
@@ -239,10 +245,6 @@ NSMutableArray *usersArray;
     cell.countryLabel.text = [NSString stringWithFormat:@"Country | %@", [usersArray[indexPath.row] country]];
     cell.registeredDateLabel.text = [usersArray[indexPath.row] registeredDate];
     return cell;
-}
-
-- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return usersArray.count;
 }
 
 #pragma mark - Table view Delegate
